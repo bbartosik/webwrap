@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: WebWrap
+        psr4_prefix: WebWrap
+        src_path: app
