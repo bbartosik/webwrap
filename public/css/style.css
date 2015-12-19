@@ -1,0 +1,142 @@
+div #lorem {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-left: 100px;
+    margin-right:100px;
+    border: 1px solid #D4D0D0;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+div #gen {
+  text-align:center;
+  margin:auto;
+}
+
+div #lorem-set {
+    width: 400px;
+    height: 100px;
+    text-align:center;
+    margin:auto;
+}
+
+.col-md-4 {
+    width: 33%;
+    height: 200px;
+}
+
+.btn-block {
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-top: 25px;
+
+}
+div #arrow {
+  width: 100%;
+  height: 100px;
+}
+
+.footer {
+  margin-left: 80px;
+  margin-right:80px;
+}
+
+h1  {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+  font-size: 35px;
+
+}
+
+h2 {
+  font-family: 'Lucida Bright', Georgia, serif;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+  text-align: center;
+  color: #da4453;
+  text-decoration: none;
+}
+
+.navbar-custom .nav li a {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+
+}
+.navbar-custom {
+  border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.docs-article p {
+
+  text-align: center;
+  font-family: 'Economica', sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.docs-article h1 {
+
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+  font-size: 42px;
+  text-align: center;
+}
+
+.docs-article img {
+  display: block;
+  margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+}
+
+
+.mobile-image{display: none;}
+@media (min-width:992px) {
+    .mobile-image {
+        display:block !important;
+    }
+}
+.mobile-logo{display: none;}
+@media (min-width:994px) {
+    .mobile-logo {
+        display:block !important;
+    }
+}
+.mobile-logofooter{display: none;}
+@media (min-width:992px) {
+    .mobile-logofooter {
+        display:block !important;
+    }
+}
+.mobile-headfooter{display: none;}
+@media (min-width:540px) {
+    .mobile-headfooter {
+        display:block !important;
+    }
+}
