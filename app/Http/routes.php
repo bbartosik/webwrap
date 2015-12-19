@@ -11,10 +11,7 @@
 |
 */
 
-//Route::get('/', 'WrapController@getIndex');
-
-Route::get('/', function () {
- -    return view('welcome');
+Route::get('/', 'WrapController@getIndex');
 
 Route::get('/debug', function() {
 
