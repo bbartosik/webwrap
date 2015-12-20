@@ -17,7 +17,7 @@ class WrapController extends Controller
     * Displays GET RSS Feed
     */
     public function getIndex() {
-    return view('welcome');
+    return view('pages.homepage');
   }
 
 
