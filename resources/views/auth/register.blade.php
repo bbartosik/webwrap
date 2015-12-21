@@ -1,6 +1,15 @@
 @extends('master.index')
 
 @section('content')
+@extends('master.index')
+@section('content')
+<div class="container" id ='content'>
+<br>
+<br>
+<br>
+<h2>Welcome to WebWrap! Please Log in!</h2>
+
+<div id='lorem'>
 
     <p>Already have an account? <a href='/login'>Login here...</a></p>
 
@@ -40,5 +49,5 @@
         <button type='submit' class='btn btn-primary'>Register</button>
 
     </form>
-
+</div>
 @stop

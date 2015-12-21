@@ -12,6 +12,24 @@
 */
 
 Route::get('/', 'WrapController@getIndex');
+
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::get('/websites', 'WebsiteController@getIndex');
+    Route::get('/websites/show/{title?}', 'WebsiteController@getShow');
+
+    Route::get('/websites/add', 'WebsiteController@getCreate');
+    Route::post('/websites/add', 'WebsiteController@postCreate');
+
+    Route::get('/websites/edit/{id?}', 'WebsiteController@getEdit');
+    Route::post('/websites/edit', 'WebsiteController@postEdit');
+
+    Route::get('/websites/confirm-delete/{id?}', 'WebsiteController@getConfirmDelete');
+    Route::get('/websites/delete/{id?}', 'WebsiteController@getDoDelete');
+
+});
+
+Route::get('/', 'WrapController@getIndex');
 # Show login form
 Route::get('/login', 'Auth\AuthController@getLogin');
 

@@ -1,8 +1,12 @@
 @extends('master.index')
 @section('content')
+<div class="container" id ='content'>
+<br>
+<br>
+<br>
+<h2>Welcome to WebWrap! Please Log in!</h2>
 
-    <p>Don't have an account? <a href='/register'>Register here...</a></p>
-
+<div id='lorem'>
     <h1>Login</h1>
 
     @if(count($errors) > 0)
@@ -35,4 +39,5 @@
         <button type='submit' class='btn btn-primary'>Login</button>
 
     </form>
+  </div>
 @stop

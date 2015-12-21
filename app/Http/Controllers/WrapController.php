@@ -17,8 +17,14 @@ class WrapController extends Controller
     * Displays GET RSS Feed
     */
     public function getIndex() {
-    return view('pages.homepage');
-  }
+
+          if(\Auth::check()) {
+              return redirect()->to('/websites');
+          }
+
+          return view('websites.homepage');
+      }
+
 
 
 

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use WebWrap\Http\Requests;
 use WebWrap\Http\Controllers\Controller;
 
-class ImageController extends Controller
+class LogoController extends Controller
 {
     /**
      * Display a listing of the resource.

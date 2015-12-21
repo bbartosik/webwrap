@@ -2,7 +2,8 @@
 <div class="footer">
     <div class="container">
         <div class="clearfix">
-            <div class="footer-logo"><a href="http://p3.bbartosik.me"><img src="images/logo2.jpg" class="mobile-logofooter" alt="logo"></a></div>
+            <div class="footer-logo"><a href="http://p3.bbartosik.me">
+              <img src="{{asset('images/logo2.jpg')}} "</a></div>
                 <dl class="footer-nav">
                     <dt class="nav-title">Wordpress</dt>
                     <dd class="nav-item"><a href="http://wordpress.org">Wordpress.org</a></dd>

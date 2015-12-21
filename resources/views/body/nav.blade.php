@@ -9,7 +9,9 @@
           </button>
           <button type="button" class="btn btn-danger navbar-btn">Sign in</button>
           <button type="button" class="btn btn-danger navbar-btn">Join Us</button>
-          <a class="navbar-brand" href="http://p4.bbartosik.me"><img src="images/logo1.jpg" alt="Logo" height="40" class="mobile-logo"></a>
+          <a class="navbar-brand" href="http://p4.bbartosik.me">
+            <!-- <img src="images/logo1.jpg" alt="Logo" height="40" class="mobile-logo"></a> -->
+            <img src="{{asset('images/logo1.jpg')}} "></a>
         </div>
       </div>
 </nav>

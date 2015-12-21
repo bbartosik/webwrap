@@ -14,9 +14,12 @@ class WebsiteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getIndex(Request $request)
     {
-        //
+      $websites = \WebWrap\Website::all();
+      //$books = \App\Book::all();
+      //$websites = \WebWrap\Website::table('websites')->get();
+      return view('websites.index')->with('websites',$websites);
     }
 
     /**
@@ -24,9 +27,36 @@ class WebsiteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+     public function getCreate() {
+
+         return view('websites.add');
+     }
+
+     public function postCreate(Request $request) {
+
+        $this->validate(
+            $request,
+            [
+                'name' => 'required|min:5',
+                'category' => 'required|min:4',
+                'description' => 'required|min:5',
+                'site_url' => 'required|url',
+              ]
+        );
+
+        # Enter book into the database
+        $website = new \WebWrap\Website();
+        $website->name = $request->name;
+        $website->site_url = $request->site_url;
+        $website->category = $request->category;
+        $website->description = $request->description;
+
+        $website->save();
+
+        # Done
+        \Session::flash('flash_message','Your website was added!');
+        return redirect('/websites');
+
     }
 
     /**
