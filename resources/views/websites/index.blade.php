@@ -14,7 +14,6 @@
                 <h2>{{ $website->name }}</h2>
                 <h2>Category: {{ $website->category }}</h2>
                 <h2>Description: {{$website->description}}</h2>
-                <!-- <a href='/websites/edit/{{website->id}}'>Edit</a> -->
             </div>
         @endforeach
     @endif
