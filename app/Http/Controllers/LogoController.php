@@ -14,11 +14,11 @@ class LogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getIndex(Request $request)
     {
-        //
+      $logos = \WebWrap\Logo::all();
+      return view('logos.index')->with('logos',$logos);
     }
-
     /**
      * Show the form for creating a new resource.
      *

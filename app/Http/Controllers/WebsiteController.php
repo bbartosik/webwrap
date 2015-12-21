@@ -18,7 +18,14 @@ class WebsiteController extends Controller
     public function getIndex(Request $request)
     {
       $websites = \WebWrap\Website::all();
-      return view('websites.index')->with('websites',$websites);
+      $logos = \WebWrap\Logo::all();
+
+      return view('websites.index')
+            ->with([
+                'websites' => $websites,
+                'logos' => $logos,
+            ]);
+
     }
 
     /**
@@ -39,22 +46,12 @@ class WebsiteController extends Controller
      */
     public function store()
     {
-      // $this->validate(
-      //     $request,
-      //     [
-      //         'name' => 'required|min:5',
-      //         'category' => 'required|min:4',
-      //         'description' => 'required|min:5',
-      //         'site_url' => 'required|url',
-      //       ]
-      // )
-
         $website=Request::all();
         \WebWrap\Website::create($website);
         return redirect('websites');
 
-        // \Session::flash('flash_message','Your website was added!');
-        // return redirect('/websites');
+        \Session::flash('flash_message','Your website was added!');
+        return redirect('/websites');
     }
 
     /**

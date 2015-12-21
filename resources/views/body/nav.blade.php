@@ -7,8 +7,11 @@
             <span class="icon-bar">LoremIpsum</span>
             <span class="icon-bar">UserGen</span>
           </button>
-          <button type="button" class="btn btn-danger navbar-btn">Sign in</button>
-          <button type="button" class="btn btn-danger navbar-btn">Join Us</button>
+          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/login" >Sign in</button>
+          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/register">Join Us</button>
+          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/logout">Logout</button>
+          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/logos">Logos</button>
+
           <a class="navbar-brand" href="http://p4.bbartosik.me">
             <!-- <img src="images/logo1.jpg" alt="Logo" height="40" class="mobile-logo"></a> -->
             <img src="{{asset('images/logo1.jpg')}} "></a>

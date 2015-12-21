@@ -21,14 +21,14 @@ class LogosTableSeeder extends Seeder
        DB::table('logos')->insert([
          'created_at' => Carbon\Carbon::now()->toDateTimeString(),
          'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-         'file' => 'http://theverge.com/v/verge/scripts/../images/logos/text.png',
+         'file' => 'https://cdn0.vox-cdn.com/uploads/chorus_asset/file/2932938/verge-logo-full.0.png',
          'name' => 'The Verge',
          'description' => 'Awesome news website providing a vaiety of technology related articles and more.',
        ]);
        DB::table('logos')->insert([
          'created_at' => Carbon\Carbon::now()->toDateTimeString(),
          'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
-         'file' => 'http://logok.org/wp-content/uploads/2014/06/National-Geographic-logo.png',
+         'file' => 'http://www.nationalgeographicexpeditions.com/assets/images/4668/master.jpg',
          'name' => 'National Geographic',
          'description' => 'Great website providing a varaity of articles relating to Nature,Ecology and Science',
        ]);
