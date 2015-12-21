@@ -15,6 +15,10 @@
                 <h2>Category: {{ $website->category }}</h2>
                 <h2>Description: {{$website->description}}</h2>
                 <a href="{{route('websites.edit',$website->id)}}" class="btn btn-warning">Update</a>
+
+                {!! Form::open(['method' => 'DELETE', 'route'=>['websites.destroy', $website->id]]) !!}
+                {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                {!! Form::close() !!}
             </div>
         @endforeach
     @endif
