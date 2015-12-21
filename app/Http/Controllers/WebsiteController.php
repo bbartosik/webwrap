@@ -10,11 +10,6 @@ use Request;
 class WebsiteController extends Controller
 {
 
-      protected $request;
-
-      public function __construct(Request $request) {
-      $this->request = $request;
-  }
     /**
      * Display a listing of the resource.
      *
@@ -31,37 +26,10 @@ class WebsiteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function getCreate() {
+     public function Create() {
 
          return view('websites.add');
      }
-
-     public function postCreate(Request $request) {
-
-        $this->validate(
-            $request,
-            [
-                'name' => 'required|min:5',
-                'category' => 'required|min:4',
-                'description' => 'required|min:5',
-                'site_url' => 'required|url',
-              ]
-        );
-
-        # Enter book into the database
-        $website = new \WebWrap\Website();
-        $website->name = $request->name;
-        $website->site_url = $request->site_url;
-        $website->category = $request->category;
-        $website->description = $request->description;
-
-        $website->save();
-
-        # Done
-        \Session::flash('flash_message','Your website was added!');
-        return redirect('/websites');
-
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -69,9 +37,24 @@ class WebsiteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+      // $this->validate(
+      //     $request,
+      //     [
+      //         'name' => 'required|min:5',
+      //         'category' => 'required|min:4',
+      //         'description' => 'required|min:5',
+      //         'site_url' => 'required|url',
+      //       ]
+      // );
+
+        $website=Request::all();
+        \WebWrap\Website::create($website);
+        return redirect('websites');
+
+        // \Session::flash('flash_message','Your website was added!');
+        // return redirect('/websites');
     }
 
     /**

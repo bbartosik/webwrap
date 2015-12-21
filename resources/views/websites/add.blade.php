@@ -1,40 +1,32 @@
 @extends('master.index')
 @section('content')
-
 <div class="container" id ='content'>
 <br>
 <br>
 <br>
-<h2>Please Add Website to our Database!</h2>
+<h2>You can Add to our Website Collection Here!</h2>
+
 @include('errors')
-<div id='lorem'>
-<form method='POST' action='/websites/add'>
 
-    <input type='hidden' value='{{ csrf_token() }}' name='_token'>
-
-    <div class='form-group'>
-        <label>* Name:</label>
-        <input type='text' id='name'  name='name'>
+    {!! Form::open(['url' => 'websites']) !!}
+    <div class="form-group">
+        {!! Form::label('Name', 'Name:') !!}
+        {!! Form::text('name',null,['class'=>'form-control']) !!}
     </div>
-
-
-    <div class='form-group'>
-        <label for='title'>* Site Adress (URL):</label>
-        <input type='text' id='site_url' name="site_url">
+    <div class="form-group">
+        {!! Form::label('Site_Url', 'Site_Url:') !!}
+        {!! Form::text('site_url',null,['class'=>'form-control']) !!}
     </div>
-
-    <div class='form-group'>
-        <label for='Published'>Category:</label>
-        <input  type='text' id='category' name="category">
+    <div class="form-group">
+        {!! Form::label('Category', 'Category:') !!}
+        {!! Form::text('category',null,['class'=>'form-control']) !!}
     </div>
-
-    <div class='form-group'>
-        <label for='title'>* Description</label>
-        <input type='text' id='description' name='description'>
+    <div class="form-group">
+        {!! Form::label('Description', 'Description:') !!}
+        {!! Form::text('description',null,['class'=>'form-control']) !!}
     </div>
-
-
-    <button type="submit" class="btn btn-primary">Add Website</button>
-</form>
-</div>
+    <div class="form-group">
+        {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
+    </div>
+    {!! Form::close() !!}
 @stop
