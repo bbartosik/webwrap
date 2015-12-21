@@ -5,12 +5,12 @@
 <br>
 <br>
 <h2>Welcome to WebWrap! Your daily Feed!</h2>
-<div id='lorem'>
 
       @if(sizeof($websites) == 0)
         You have not added any books.
       @else
         @foreach($websites as $website)
+        <div id='lorem'>
         <h2>{{ $website->name }}</h2>
         <h2>Category: {{ $website->category }}</h2>
         <h2>Description: {{$website->description}}</h2>

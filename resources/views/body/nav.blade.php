@@ -18,6 +18,7 @@
             <li><a class="nav-link" href="http://p4.bbartosik.me/logout">Logout</a></li>
             <li><a class="nav-link" href="http://p4.bbartosik.me/register">Logos</a></li>
             <li><a class="nav-link" href="http://p4.bbartosik.me/logos">Join Us</a></li>
+            <li><a class="nav-link" href="http://p4.bbartosik.me/create">Add New Website</a></li>
           </ul>
         </div>
       </div>
