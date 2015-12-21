@@ -13,14 +13,12 @@ Simple CRUD Application! Creating/ Browsing/ Updating/ Deleting/ various collect
 
 #Details for teaching team
 
-All functions working as described by project requirements. I used least code possible to create simple and quick application. There are two tables use (excluding) user table. One is full CRUD and one hosts logos whichu can browse. All logic sits in Controllers and a little bit of database code in Model. I utilized View inheritance by breaking project apart into smaller parts.  Routes provide clean website breakdown. Used Illuminaty package for forms as suggested by instructor. 
+All functions working as described by project requirements. I used least code possible to create simple and quick application. There are two tables used (excluding user table). One is full CRUD and one hosts logos which can be browsed. All logic sits in Controllers and a little bit of database code in Model. I utilized View inheritance by breaking project apart into smaller parts.  Routes provide clean website breakdown (utilized Restful). Used Collective package for forms as suggested by instructor. 
 
 #Outside code
 
 Laravel 5.* <http://laravel.com/>
 
 Bootflat: <http://bootflat.github.io/>
-
-Laracast: <https://laracasts.com/>
 
 Collective <https://laravelcollective.com>
