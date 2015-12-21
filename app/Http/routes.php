@@ -15,7 +15,7 @@ Route::get('/', 'WrapController@getIndex');
 
 Route::group(['middleware' => 'auth'], function() {
 
-    Route::resource('websites','WebsiteController');
+     Route::resource('websites','WebsiteController');
 
     Route::get('/websites', 'WebsiteController@getIndex');
     Route::get('/websites/show/{title?}', 'WebsiteController@getShow');

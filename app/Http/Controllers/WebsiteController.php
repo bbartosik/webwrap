@@ -2,13 +2,19 @@
 
 namespace WebWrap\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 use WebWrap\Http\Requests;
 use WebWrap\Http\Controllers\Controller;
+use Request;
 
 class WebsiteController extends Controller
 {
+
+      protected $request;
+
+      public function __construct(Request $request) {
+      $this->request = $request;
+  }
     /**
      * Display a listing of the resource.
      *
