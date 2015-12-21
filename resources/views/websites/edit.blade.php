@@ -1,5 +1,6 @@
 @extends('master.index')
 @section('content')
+
 <div class="container" id ='content'>
 <br>
 <br>
@@ -8,36 +9,25 @@
 
 @include('errors')
 
-<div id='lorem'>
-<form method='POST' action='/websites/edit'>
-
-    <input type='hidden' value='{{ csrf_token() }}' name='_token'>
-
-    <input type='hidden' name='id' value='{{ $website->id }}'>
-
-    <div class='form-group'>
-        <label>* Name:</label>
-        <input type='text' id='name' name='name' value='{{$website->name}}'>
+    {!! Form::model($website,['method' => 'PATCH','route'=>['websites.update',$website->id]]) !!}
+    <div class="form-group">
+        {!! Form::label('Name', 'Name:') !!}
+        {!! Form::text('name',null,['class'=>'form-control']) !!}
     </div>
-
-    <div class='form-group'>
-        <label for='site_url'>* WebsiteAdress (URL):</label>
-        <input type='text' id='site_url' name="site_url" value='{{website->site_url}}'>
+    <div class="form-group">
+        {!! Form::label('Site_Url', 'SiteUrl:') !!}
+        {!! Form::text('site_url',null,['class'=>'form-control']) !!}
     </div>
-
-    <div class='form-group'>
-        <label for='category'>Category:</label>
-        <input type='text' id='category' name="category" value='{{$website->category}}'>
+    <div class="form-group">
+        {!! Form::label('Category', 'Category:') !!}
+        {!! Form::text('category',null,['class'=>'form-control']) !!}
     </div>
-
-    <div class='form-group'>
-        <label for='description'>* Description:</label>
-        <input type='text' id='site_url' name='site_url' value='{{$website->description}}'>
+    <div class="form-group">
+        {!! Form::label('Description', 'Description:') !!}
+        {!! Form::text('description',null,['class'=>'form-control']) !!}
     </div>
-
-
-    <br>
-    <button type="submit" class="btn btn-primary">Save changes</button>
-</form>
-</div>
+    <div class="form-group">
+        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+    </div>
+    {!! Form::close() !!}
 @stop

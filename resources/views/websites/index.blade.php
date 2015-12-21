@@ -14,6 +14,7 @@
                 <h2>{{ $website->name }}</h2>
                 <h2>Category: {{ $website->category }}</h2>
                 <h2>Description: {{$website->description}}</h2>
+                <a href="{{route('websites.edit',$website->id)}}" class="btn btn-warning">Update</a>
             </div>
         @endforeach
     @endif

@@ -17,8 +17,6 @@ class WebsiteController extends Controller
     public function getIndex(Request $request)
     {
       $websites = \WebWrap\Website::all();
-      //$books = \App\Book::all();
-      //$websites = \WebWrap\Website::table('websites')->get();
       return view('websites.index')->with('websites',$websites);
     }
 
@@ -87,35 +85,11 @@ class WebsiteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function getEdit($id = null) {
-
-       $website = \WebWrap\Website::find($id);
-
-       if(is_null($website)) {
-         \Session::flash('flash_message','Website not found.');
-         return redirect('\websites');
-       }
-
-       return view('websites.edit')->with('website' => ,$website);
-
-     }
-
-     public function postEdit(Request $request) {
-
-       $website = \WebWrap\Website::find($request->id);
-
-       $website->name = $request->name;
-       $website->site_url = $request->site_url;
-       $website->category = $request->category;
-       $website->description = $request->description;
-
-       $website->save();
-
-
-       \Session::flash('flash_message','Your website was updated.');
-       return redirect('/websites/edit/'.$request->id);
-
-     }
+     public function edit($id)
+      {
+         $website=\WebWrap\Website::find($id);
+         return view('websites.edit',compact('website'));
+      }
 
 
     /**
@@ -125,9 +99,12 @@ class WebsiteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+       $websiteUpdate=Request::all();
+       $website=\WebWrap\Website::find($id);
+       $website->update($websiteUpdate);
+       return redirect('websites');
     }
 
     /**
