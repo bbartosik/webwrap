@@ -36,7 +36,7 @@
             <label for='remember' class='checkboxLabel'>Remember me</label>
         </div>
 
-        <button type='submit' class='form-control'>Login</button>
+        <button type='submit' class='btn btn-primary'>Login</button>
 
     </form>
   </div>
