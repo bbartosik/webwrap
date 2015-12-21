@@ -4,6 +4,7 @@
 <br>
 <br>
 <br>
-<h2>Welcome to WebWrap! Your daily Feed!</h2>
+<h1>Welcome to WebWrap! Collection of cool websites!</h1>
+<h1> Its necessary that you register and log into the website in orderto take part!</h1>
 
 @stop

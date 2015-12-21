@@ -7,14 +7,18 @@
             <span class="icon-bar">LoremIpsum</span>
             <span class="icon-bar">UserGen</span>
           </button>
-          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/login" >Sign in</button>
-          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/register">Join Us</button>
-          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/logout">Logout</button>
-          <button type="button" class="btn btn-danger navbar-btn" href="http://p4.bbartosik.me/logos">Logos</button>
 
           <a class="navbar-brand" href="http://p4.bbartosik.me">
             <!-- <img src="images/logo1.jpg" alt="Logo" height="40" class="mobile-logo"></a> -->
             <img src="{{asset('images/logo1.jpg')}} "></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav-link" href="http://p4.bbartosik.me/login">Login</a></li>
+            <li><a class="nav-link" href="http://p4.bbartosik.me/logout">Logout</a></li>
+            <li><a class="nav-link" href="http://p4.bbartosik.me/register">Logos</a></li>
+            <li><a class="nav-link" href="http://p4.bbartosik.me/logos">Join Us</a></li>
+          </ul>
         </div>
       </div>
 </nav>
