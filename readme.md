@@ -9,7 +9,7 @@ Simple CRUD Application! Creating/ Browsing/ Updating/ Deleting/ various collect
 
 #Demo
 
-<http://screencast.com/t/yBuXF4VGyO>
+<http://screencast.com/t/Gfm0oXOthE>
 
 #Details for teaching team
 
