@@ -16,15 +16,9 @@ Route::get('/', 'WrapController@getIndex');
 
 Route::group(['middleware' => 'auth'], function() {
 
-
+    // Route::resource('websites','WebsiteController');
     Route::get('/websites', 'WebsiteController@getIndex');
     Route::get('/websites/show/{title?}', 'WebsiteController@getShow');
-
-    Route::get('/websites/add', 'WebsiteController@getCreate');
-    Route::post('/websites/add', 'WebsiteController@postCreate');
-
-    Route::get('/websites/confirm-delete/{id?}', 'WebsiteController@getConfirmDelete');
-    Route::get('/websites/delete/{id?}', 'WebsiteController@getDoDelete');
 
 });
 

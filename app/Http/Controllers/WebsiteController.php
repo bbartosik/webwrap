@@ -28,7 +28,7 @@ class WebsiteController extends Controller
      */
      public function Create() {
 
-         return view('websites.add');
+         return view('websites.create');
      }
 
     /**
@@ -47,7 +47,7 @@ class WebsiteController extends Controller
       //         'description' => 'required|min:5',
       //         'site_url' => 'required|url',
       //       ]
-      // );
+      // )
 
         $website=Request::all();
         \WebWrap\Website::create($website);
@@ -104,6 +104,7 @@ class WebsiteController extends Controller
      */
     public function destroy($id)
     {
-        //
+      \WebWrap\Website::find($id)->delete();
+      return redirect('websites');
     }
 }
