@@ -1,5 +1,5 @@
-##WebWrap - Dwa15 Project 4
-##Live URL
+#WebWrap - Dwa15 Project 4
+#Live URL
 
 <http://p4.bbartosik.me>
 
@@ -18,6 +18,9 @@ All functions working as described by project requirements. I used least code po
 #Outside code
 
 Laravel 5.* <http://laravel.com/>
+
 Bootflat: <http://bootflat.github.io/>
+
 Laracast: <https://laracasts.com/>
+
 Collective <https://laravelcollective.com>
