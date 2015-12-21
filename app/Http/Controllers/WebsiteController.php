@@ -19,13 +19,11 @@ class WebsiteController extends Controller
     {
       $websites = \WebWrap\Website::all();
       $logos = \WebWrap\Logo::all();
-
       return view('websites.index')
             ->with([
                 'websites' => $websites,
                 'logos' => $logos,
             ]);
-
     }
 
     /**

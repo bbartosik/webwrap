@@ -11,8 +11,6 @@
         You have not added any books.
       @else
         @foreach($websites as $website)
-            @foreach($logos as $logo)
-            <h2><img src='{{ $logo->file }}'></h2>
         <h2>{{ $website->name }}</h2>
         <h2>Category: {{ $website->category }}</h2>
         <h2>Description: {{$website->description}}</h2>
@@ -22,7 +20,6 @@
         {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
         {!! Form::close() !!}
     </div>
-        @endforeach
     @endforeach
     @endif
 @stop
