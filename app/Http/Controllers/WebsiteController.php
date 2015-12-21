@@ -87,10 +87,36 @@ class WebsiteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+     public function getEdit($id = null) {
+
+       $website = \WebWrap\Website::find($id);
+
+       if(is_null($website)) {
+         \Session::flash('flash_message','Website not found.');
+         return redirect('\websites');
+       }
+
+       return view('websites.edit')->with('website' => ,$website);
+
+     }
+
+     public function postEdit(Request $request) {
+
+       $website = \WebWrap\Website::find($request->id);
+
+       $website->name = $request->name;
+       $website->site_url = $request->site_url;
+       $website->category = $request->category;
+       $website->description = $request->description;
+
+       $website->save();
+
+
+       \Session::flash('flash_message','Your website was updated.');
+       return redirect('/websites/edit/'.$request->id);
+
+     }
+
 
     /**
      * Update the specified resource in storage.
