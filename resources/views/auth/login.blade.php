@@ -23,20 +23,20 @@
 
         <div class='form-group'>
             <label for='email'>Email</label>
-            <input type='text' name='email' id='email' value='{{ old('email') }}'>
+            <input type='text' name='email' id='email' class='form-control' value='{{ old('email') }}'>
         </div>
 
         <div class='form-group'>
             <label for='password'>Password</label>
-            <input type='password' name='password' id='password' value='{{ old('password') }}'>
+            <input type='password' name='password' id='password' class='form-control' value='{{ old('password') }}'>
         </div>
 
         <div class='form-group'>
-            <input type='checkbox' name='remember' id='remember'>
+            <input type='checkbox' name='remember' class='form-control' id='remember'>
             <label for='remember' class='checkboxLabel'>Remember me</label>
         </div>
 
-        <button type='submit' class='btn btn-primary'>Login</button>
+        <button type='submit' class='form-control'>Login</button>
 
     </form>
   </div>

@@ -11,7 +11,7 @@
 
 <div id='lorem'>
 
-    <p>Already have an account? <a href='/login'>Login here...</a></p>
+    <h1>Already have an account? <a href='/login'>Login here...</a></h1>
 
     <h1>Register</h1>
 
@@ -28,25 +28,25 @@
 
         <div class='form-group'>
             <label for='name'>Name</label>
-            <input type='text' name='name' id='name' value='{{ old('name') }}'>
+            <input type='text' name='name' class='form-control' id='name' value='{{ old('name') }}'>
         </div>
 
         <div class='form-group'>
             <label for='email'>Email</label>
-            <input type='text' name='email' id='email' value='{{ old('email') }}'>
+            <input type='text' name='email' class='form-control' id='email' value='{{ old('email') }}'>
         </div>
 
         <div class='form-group'>
             <label for='password'>Password</label>
-            <input type='password' name='password' id='password'>
+            <input type='password' name='password' class='form-control' id='password'>
         </div>
 
         <div class='form-group'>
             <label for='password_confirmation'>Confirm Password</label>
-            <input type='password' name='password_confirmation' id='password_confirmation'>
+            <input type='password' class='form-control' name='password_confirmation' id='password_confirmation'>
         </div>
 
-        <button type='submit' class='btn btn-primary'>Register</button>
+        <button type='submit' class='form-control'>Register</button>
 
     </form>
 </div>
